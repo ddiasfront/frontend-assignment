@@ -4,7 +4,6 @@ export const mutations = {
   },
 
   editSpend(state, editingInput) {
-    debugger;
     state[editingInput.editingInputName] = editingInput.editingInputValue;
   },
 

@@ -9,14 +9,13 @@
         error: !companyName || !companyName.length
       }"
     />
-    <p>aa {{ companyName }}</p>
+    <p>{{ companyName }}</p>
   </div>
 </template>
 
 <script>
 import { mapActions } from "vuex";
 export default {
-  name: "CompanyNameInput",
   props: ["CompanyNameInput"],
   computed: {
     companyName() {

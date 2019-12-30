@@ -1,3 +1,49 @@
+body {
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
 .error {
   border: 1px solid red;
+}
+
+#header {
+  height: 75px;
+  background-color: grey;
+}
+
+#footer {
+  height: 150px;
+  background-color: grey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.menu {
+  ul {
+    width: 200px;
+    border: 1px solid grey;
+    border-radius: 2px;
+    padding: 0;
+    li {
+      list-style: none;
+      padding: 10px;
+    }
+  }
+}
+
+#menuwrapper {
+  display: flex;
+  padding-right: 100px;
+}
+
+#companydatapage {
+  display: flex;
+  flex-direction: column;
+}
+
+#menuviewwrapper {
+  display: flex;
 }

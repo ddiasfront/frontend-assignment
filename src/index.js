@@ -12,11 +12,12 @@ import CompanyData from "./components/Pages/CompanyData.vue";
 Vue.use(VueRouter);
 
 const Foo = { template: "<div>foo</div>" };
-const routes = [{ path: "/foo", component: Foo }];
+const routes = [{ path: "/", component: CompanyData, name: `CompanyData` }];
 
 const router = new VueRouter({
   mode: "history",
-  routes
+  routes: routes,
+  base: `/`
 });
 
 // new Vue({
@@ -28,5 +29,6 @@ const router = new VueRouter({
 
 new Vue({
   router,
-  store
+  store,
+  render: createElement => createElement(App)
 }).$mount("#app");

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="companydatapage">
     <h1>Company Data</h1>
     <CompanyNameInput />
     <SpendInput inputName="spend" />

@@ -9,7 +9,6 @@ export default {
   editSpend({ commit }, editingInput) {
     const editingInputName = editingInput.editingInputName;
     const editingInputValue = editingInput.value;
-    debugger;
     commit("editSpend", {
       editingInputName,
       editingInputValue,

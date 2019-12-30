@@ -8,7 +8,7 @@
       }"
       v-model="spend"
     />
-    <p>aa {{ inputName }}</p>
+    <p>Vuex parsed value: {{ inputName }} {{this.$store.state[this.$props["inputName"]]}}</p>
   </div>
 </template>
 
@@ -22,7 +22,6 @@ export default {
       return this.$store.state;
     },
     spend() {
-      debugger;
       return (
         "$ " +
         parseFloat(this.$store.state[this.$props["inputName"]])
@@ -44,7 +43,6 @@ export default {
           value
         });
       } else {
-        debugger;
         var myfloatmatch = /[+-]?([0-9]*[.])?[0-9]+/g;
         value = value.match(myfloatmatch);
         if (value.length > 1) {
