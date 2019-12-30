@@ -1,8 +1,32 @@
-import 'Styles/main.scss';
-import Vue from 'vue';
-import HelloWorld from 'Components/HelloWorld.vue';
+import "Styles/main.scss";
+import Vue from "vue";
+import VueRouter from "vue-router";
+import App from "Components/App.vue";
+import store from "./store";
+import CompanyData from "./components/Pages/CompanyData.vue";
+
+// 3. Create the router instance and pass the `routes` option
+// You can pass in additional options here, but let's
+// keep it simple for now.
+
+Vue.use(VueRouter);
+
+const Foo = { template: "<div>foo</div>" };
+const routes = [{ path: "/foo", component: Foo }];
+
+const router = new VueRouter({
+  mode: "history",
+  routes
+});
+
+// new Vue({
+//   router,
+//   store,
+//   render: createElement => createElement(App),
+//   el: "#app"
+// });
 
 new Vue({
-  render: createElement => createElement(HelloWorld),
-  el: '#app'
-});
+  router,
+  store
+}).$mount("#app");
